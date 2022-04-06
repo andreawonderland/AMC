@@ -307,7 +307,7 @@ if __name__ == "__main__":
     num_epochs = 30  # epoch总数
     test_size = 0.3
     lr = 0.005
-    X, Y = data_process("/home/data/jjg1/data/RML2016.10a_dict.pkl")  # 数据读取预处理
+    X, Y = data_process("/content/gdrive/MyDrive/RML2016.10a_dict.pkl")  # 数据读取预处理
     X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size, random_state=1)  # 划分训练集、测试集
     X_train, X_test = to_transpose(X_train, X_test, 128)  # 将数据转换成I/Q
     train_data = Data.TensorDataset(X_train, Y_train)  # 将训练集转化为张量后,使用TensorDataset将X和Y整理到一起
