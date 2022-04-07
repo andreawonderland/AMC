@@ -216,7 +216,7 @@ def train_model(model, traindataloader, testdataloader, train_rate, criterion, o
 
         # 将损失和精度保存到csv表格中
         list1 = [epoch + 1, train_loss_all[-1], train_acc_all[-1] * 100, val_acc_all[-1] * 100]
-        with open("/home/data/jjg1/rnn/2016ares.csv", "a", newline='') as csvfile:
+        with open("/content/gdrive/MyDrive/2016ares.csv", "a", newline='') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(list1)
             csvfile.close()
