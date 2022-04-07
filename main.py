@@ -272,7 +272,7 @@ def train_model(model, traindataloader, testdataloader, train_rate, criterion, o
             best_acc = val_acc_all[-1]
             print('[{}] 训练损失: {:.4f}  训练精度: {:.2f}%  测试精度: {:.2f}%  保存模型'
                   .format(epoch + 1, train_loss_all[-1], train_acc_all[-1] * 100, val_acc_all[-1] * 100))
-            torch.save(model, '/home/data/jjg1/rnn/2016apkl/cs.pkl', _use_new_zipfile_serialization=False)
+            torch.save(model, '/content/gdrive/MyDrive/cs.pkl', _use_new_zipfile_serialization=False)
         else:
             print('[{}] 训练损失: {:.4f}  训练精度: {:.2f}%  测试精度: {:.2f}%'
                   .format(epoch + 1, train_loss_all[-1], train_acc_all[-1] * 100, val_acc_all[-1] * 100))
@@ -284,7 +284,7 @@ def train_model(model, traindataloader, testdataloader, train_rate, criterion, o
     # early_stopping(correct / total, model)
 
     # 使用最好模型的参数
-    model = torch.load('/home/data/jjg1/rnn/2016apkl/cs.pkl')  # 加载模型
+    model = torch.load('/content/gdrive/MyDrive/cs.pkl')  # 加载模型
 
     train_process = pd.DataFrame(
         data={"epoch": range(epoch + 1),  # 必须加1，才能和下面的train_loss_all等长度一致
