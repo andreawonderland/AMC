@@ -337,7 +337,7 @@ if __name__ == "__main__":
         patch_size=2,
         num_classes=11,
         transformer=efficient_transformer
-    )
+    )  #  这个地方后面没用到
 
     net = DRSN(34)
     # net = torch.load('/home/data/jjg1/rnn/2016apkl/cs.pkl')
